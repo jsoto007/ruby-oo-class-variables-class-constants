@@ -7,8 +7,12 @@ class Shoe
   BRANDS = []
 
   def initialize(brand)
-    @@brand = brand
-    BRANDS << brand
+    @brand = brand
+
+    while !BRANDS.include?(brand)
+      BRANDS << brand
+    
+    end 
   end
  
 
@@ -17,14 +21,11 @@ class Shoe
     puts "Your shoe is as good as new!"
   end
 
-  def self.brand
-    @@brand = brand.uniq
-    BRANDS << brand 
-  end 
 
-  def brand=(brand)
-    @brand = brand
-    BRANDS << brand.
-  end
+
+  # def brand
+  #   @brand = brand
+  #   BRANDS << brand.uniq
+  # end
 
 end
