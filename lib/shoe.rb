@@ -19,11 +19,12 @@ class Shoe
 
   def self.brand
     @@brand = brand.uniq
+    BRANDS << brand 
   end 
 
   def brand=(brand)
     @brand = brand
-    BRANDS << brand
+    BRANDS << brand.
   end
 
 end
